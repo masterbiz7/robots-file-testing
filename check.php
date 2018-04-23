@@ -12,8 +12,15 @@
             $serv_response = "Программист: Файл robots.txt должны отдавать код ответа 200, иначе файл не будет 
         обрабатываться. Необходимо настроить сайт таким образом, чтобы при обращении к файлу robots.txt сервер возвращает 
         код ответа 200";
-            echo 'Возникла ошибка при получении файла';
+            echo '<br><br>'.'Возникла ошибка при получении файла!';
+            $header_status = "Ошибка";
+            $host = "Ошибка";
+            $sitemap = "Ошибка";
+            $fsize = "Ошибка";
             $colored1 = "bg-danger";
+            $colored2 = "bg-danger";
+            $colored_smap = "bg-danger";
+            $colored_fs = "bg-danger";
             $n++;
 
         } else if ($file_headers[0] == 'HTTP/1.1 200 OK') {
@@ -120,8 +127,8 @@
 </div>
 <br><br>
 <div class="container">
-    <div class="row table-responsive-md">
-        <table class="table table-hover" border = "1">
+    <div class="row">
+        <table class="table" border = "1">
             <tr>
                 <th>№</th>
                 <th>Название проверки</th>
